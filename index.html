@@ -17,55 +17,65 @@
             color: white;
         }
         .form-container {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             max-width: 400px;
             width: 100%;
+            text-align: center;
         }
         .form-container h2 {
-            margin-top: 0;
-            text-align: center;
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #ffcc00;
         }
         .form-group {
             margin-bottom: 15px;
         }
         .form-group input {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #333;
+            border-radius: 5px;
+            background-color: #444;
             color: white;
+            font-size: 16px;
         }
         .form-group input::placeholder {
-            color: #aaa;
+            color: #bbb;
         }
         .attack-btn {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #dc3545;
             color: #fff;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
         }
         .attack-btn:hover {
             background-color: #c82333;
+            transform: scale(1.05);
         }
         .contact-link {
             display: block;
-            margin-top: 15px;
-            text-align: center;
+            margin-top: 20px;
             color: #00bfff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
         .contact-link:hover {
+            color: #0099cc;
             text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #00bfff;
         }
     </style>
 </head>
@@ -80,6 +90,7 @@
         </div>
         <button class="attack-btn" onclick="sendRequests()">ATTACK</button>
         <a href="mailto:owner@example.com" class="contact-link">Contact Site Owner</a>
+        <div class="footer">Made By Sabuj💚</div>
     </div>
 
     <script>
@@ -92,7 +103,7 @@
                 return;
             }
 
-            const url = `https://khaodao.onrender.com/?num=${phoneNumber}`;
+            const url = `https://pickye.onrender.com?number=${phoneNumber}`;
             let successCount = 0;
 
             for (let i = 0; i < amount; i++) {

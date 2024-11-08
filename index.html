@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DANGEROUS BOMBING SITE">
-    <meta name="author" content="RS RISHAD SABUJ">
     <title>RS BOMBER</title>
     <style>
         :root {
@@ -32,10 +30,8 @@
 
         h1 {
             color: var(--heading-color);
-            display: block;
             text-align: center;
-            margin: 25px 25px 0 25px;
-            padding: 25px 25px 0 25px;
+            margin: 25px;
             font-size: 60px;
         }
 
@@ -43,75 +39,49 @@
             height: 500px;
             width: 900px;
             background-color: var(--box-background);
-            display: block;
-            margin: 0 auto;
-            margin-top: 6%;
+            margin: 6% auto;
             box-shadow: 0 4px 15px 0 var(--shadow-color);
             border-radius: 10px;
             color: var(--text-color);
+            padding: 20px;
         }
 
         .main input {
             height: 45px;
             width: 70%;
-            display: block;
-            margin: 0 auto;
+            margin: 15px auto;
             outline: none;
-            text-decoration: none;
             font-size: var(--font-size);
             font-weight: bold;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            border-color: var(--border-color);
-            margin-top: 15px;
+            border: none;
+            border-bottom: 2px solid var(--border-color);
             color: cyan;
             background: transparent;
+            display: block;
         }
 
         .main label {
-            position: relative;
-            left: 15%;
-            top: 57px;
+            display: block;
             font-size: 25px;
             color: var(--text-color);
-            pointer-events: none;
-            transition: 0.5s;
+            margin: 10px auto;
         }
 
         .main .submit {
-            height: 50px;
-            width: 250px;
-            display: block;
-            margin: 0 auto;
+            text-align: center;
             margin-top: 20px;
         }
 
         .main .submit div {
-            position: relative;
-            display: inline-block;
             padding: 15px 50px;
             color: #03e9f4;
             font-size: 20px;
-            text-decoration: none;
             text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
             overflow: hidden;
             transition: .5s;
-            margin-top: 40px;
-            letter-spacing: 4px;
-            cursor: pointer;
-        }
-
-        .container footer span {
-            color: var(--text-color);
-            display: block;
-            margin-top: 50px;
-        }
-
-        .container footer span a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: bold;
+            display: inline-block;
         }
 
         .main .submit div:hover {
@@ -123,28 +93,80 @@
                         0 0 10px var(--button-hover),
                         0 0 40px var(--button-hover);
         }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 910px) {
+            .main {
+                width: 700px;
+                margin-top: 15%;
+            }
+        }
+
+        @media screen and (max-width: 876px) {
+            .main {
+                width: 500px;
+                margin-top: 22%;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            h1 {
+                font-size: 40px;
+            }
+            .main {
+                height: 400px;
+                width: 500px;
+                margin-top: 26%;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            h1 {
+                font-size: 30px;
+            }
+            .main {
+                height: 350px;
+                width: 400px;
+                margin-top: 35%;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .main {
+                width: 300px;
+                margin-top: 55%;
+            }
+        }
     </style>
 </head>
 <body> 
     <div class="container">
         <div class="main">
             <h1 class="text">RS BOMBER</h1>
-            <label class="number_text">Number</label>
-            <input type="number" maxlength="11" minlength="11" id="phone">
-            <label class="amount_text">Amount</label>
+            <label for="phone">Number</label>
+            <input type="number" id="phone" maxlength="11" minlength="11">
+            
+            <label for="amount">Amount</label>
             <input type="number" id="amount">
+            
             <div class="submit">
-                <center>
                 <div id="submit" onclick="sendRequest()">
                     ATTACK 
                 </div>
-                </center>
             </div>
         </div>
         <footer>
-            <center>
-            <span>Contact Site Owner 👉 <a href="https://www.facebook.com/AlpHaRisHaD.33">CLICK</a></span>
-            </center>
+            <span>Contact Site Owner 👉 <a href="https://www.facebook.com/AlpHaRisHaD.33" target="_blank">CLICK</a></span>
         </footer>
     </div>
 
